@@ -4,6 +4,10 @@
   min-height: 2000px;
 }
 
+.upcoming-event h1 {
+  margin-top: 10px;
+}
+
 .event-page-card {
   margin-top: 50px;
 }

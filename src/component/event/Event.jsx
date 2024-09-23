@@ -1,7 +1,10 @@
 import React from "react";
-import img1 from "../../assets/coderscarnival.jpg";
-import img2 from "../../assets/innotech.jpg.png";
-import img3 from "../../assets/acunetix9.jpg";
+import img1 from "../../assets/Acunetix11.jpg";
+import img2 from "../../assets/CC.jpg";
+import img3 from "../../assets/Acunetix11.jpg";
+import img4 from "../../assets/coderscarnival.jpg";
+import img5 from "../../assets/innotech.jpg.png";
+import img6 from "../../assets/acunetix9.jpg";
 import "./Event.css";
 
 const Event = () => {
@@ -21,14 +24,10 @@ const Event = () => {
       <div className="event-header">
         <h1>Events</h1>
       </div>
-      <div className="upcoming-event">
+      <div className="upcoming-event" >
         <h1>Upcoming Events</h1>
-        <h2>Acunetix 10.0</h2>
-        <p>
-          This year we're celebrating the tenth year of ACUNETIX which is a
-          flagship fest with a series of technical and non- technical events
-          under it, in collaboration with ACES.
-        </p>
+        <h2>Coming Soon!</h2>
+        <p>Stay with us for more updates on upcoming events.</p>
       </div>
       <div className="event-card-body">
         <h2>Previous Events held by us</h2>
@@ -46,6 +45,17 @@ const Event = () => {
         </div>
         <div className="event-card event-page-card">
           <div className="card">
+            <img src={img4} className="card-img-top" alt="" />
+          </div>
+          <div className="card">
+            <img src={img5} className="card-img-top" alt="" />
+          </div>
+          <div className="card">
+            <img src={img6} className="card-img-top" alt="" />
+          </div>
+        </div>
+        {/* <div className="event-card event-page-card">
+          <div className="card">
             <img src={img1} className="card-img-top" alt="" />
           </div>
           <div className="card">
@@ -54,18 +64,7 @@ const Event = () => {
           <div className="card">
             <img src={img3} className="card-img-top" alt="" />
           </div>
-        </div>
-        <div className="event-card event-page-card">
-          <div className="card">
-            <img src={img1} className="card-img-top" alt="" />
-          </div>
-          <div className="card">
-            <img src={img2} className="card-img-top" alt="" />
-          </div>
-          <div className="card">
-            <img src={img3} className="card-img-top" alt="" />
-          </div>
-        </div>
+        </div> */}
       </div>
       <div className="free-space"></div>
     </div>
