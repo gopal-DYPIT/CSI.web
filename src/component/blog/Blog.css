@@ -1,0 +1,52 @@
+.app__blog_view img{
+    height: 10rem;
+    width: 100%;
+    padding: 1%;
+}  
+.app__blog_header {
+    padding: 2% 2%;
+}
+.app__blog_header h2{
+    font-size: 3rem;
+    color: whi;
+    font-weight: 300;
+    
+}
+.app__blog_tabs{
+    display: flex;
+}
+.app__blog_tabs h6{
+    padding: 0% 2%;
+    color: white;
+}
+.app__blog {
+    background-color: rgba(100, 100, 100, 0);
+    margin: 0% 0%;
+    padding: 2%;
+    backdrop-filter: blur(5px);
+    box-shadow: inset 0 0 2000px rgba(0, 0, 0, 0);
+    border-radius: 5px;
+}
+
+
+
+
+.app_articles{
+    padding: 2%;
+}
+.articles__black1 h6{
+    max-lines: 3;
+    color: white;
+    font-weight: 300;
+    
+}
+.articles__black1 h3{
+    max-lines: 3;
+    color: white;
+    font-weight: 400;
+    
+}
+.app__editors{
+    display: flex;
+    flex-direction: row;
+}

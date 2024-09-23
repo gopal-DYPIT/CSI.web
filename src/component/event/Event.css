@@ -1,0 +1,19 @@
+.event-page {
+  color: #fff;
+  width: 100%;
+  min-height: 2000px;
+}
+
+.event-page-card {
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 576px) {
+  .event-page-card {
+    margin-top: 0;
+  }
+
+  .event-page-card .card {
+    margin-top: 50px;
+  }
+}
