@@ -2,6 +2,11 @@ import { Devices } from "@mui/icons-material";
 import React from "react";
 import { Link } from "react-router-dom";
 import EventCard from "./EventCard";
+import img1 from "../../assets/C3.jpg";
+import img2 from "../../assets/C1.jpg";
+import img3 from "../../assets/C2.jpg";
+import img4 from "../../assets/C4.jpg";
+import img5 from "../../assets/C5.jpg";
 // import HomeCreative from "./Home-creative";
 import "./Home.css";
 import NumberCounting from "./NumberCounting";
@@ -21,7 +26,7 @@ const Home = () => {
     >
       ̥{/* <HomeCreative /> */}̥
       <h3 className="text-center pt-5 mb-5 ">
-        Welcome to Computer Society of India, DIT Chapter
+        Welcome to <span className="text-aqua">Computer Society of India</span>, DIT Chapter
       </h3>
       <div className="container-fluid py-4 p-sm-5 overview">
         <div className="row firstRow">
@@ -112,7 +117,7 @@ const Home = () => {
               <div className="carousel-inner">
                 <div className="carousel-item active">
                   <img
-                    src="https://drive.google.com/uc?export=view&id=1HZJKn0GFmsSPb9932WQX8HBJcBw5WF9f"
+                    src={img1}
                     className="d-block w-100"
                     data-interval="2000"
                     alt="..."
@@ -120,7 +125,7 @@ const Home = () => {
                 </div>
                 <div className="carousel-item">
                   <img
-                    src="https://drive.google.com/uc?export=view&id=1OxIadlEK_kkl-5QaDwcqsyb2vaThjf1P"
+                    src={img2}
                     className="d-block w-100"
                     data-interval="2000"
                     alt="..."
@@ -128,7 +133,7 @@ const Home = () => {
                 </div>
                 <div className="carousel-item">
                   <img
-                    src="https://drive.google.com/uc?export=view&id=1Da95bG0xN7i_U7gCPhVE-TIFZsvzZVcm"
+                    src={img3}
                     className="d-block w-100"
                     data-interval="2000"
                     alt="..."
@@ -136,7 +141,7 @@ const Home = () => {
                 </div>
                 <div className="carousel-item">
                   <img
-                    src="https://drive.google.com/uc?export=view&id=1inJGSMmn-ghz4-t0qqfghfj24MuBku4g"
+                    src={img4}
                     className="d-block w-100"
                     data-interval="2000"
                     alt="..."
@@ -144,7 +149,7 @@ const Home = () => {
                 </div>
                 <div className="carousel-item">
                   <img
-                    src="https://drive.google.com/uc?export=view&id=1n-XITLWCE-PYnNunuoxNRqLfppSw0AFw"
+                    src={img5}
                     className="d-block w-100"
                     data-interval="2000"
                     alt="..."

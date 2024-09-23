@@ -30,12 +30,13 @@
 }
 
 .upcoming-event h2 {
+  color: aqua;
   margin-top: 26px;
-  text-decoration: underline;
+  text-decoration:wavy;
 }
 
 .upcoming-event p {
-  font-size: 17px;
+  font-size: 13px;
 }
 
 .event-card-body {

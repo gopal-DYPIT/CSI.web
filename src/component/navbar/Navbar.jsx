@@ -29,7 +29,6 @@ const Navbar = () => {
     >
       <Link className="navbar-brand" href="/">
         <img className="logo_csi" src={logo} alt="" />
-        <span className="logo-title"> COMPUTER SOCIETY OF INDIA</span>
       </Link>
       <button
         className="navbar-toggler"

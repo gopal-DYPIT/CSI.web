@@ -1,8 +1,8 @@
 import React from "react";
 import "./EventCard.css";
-import img1 from "../../assets/coderscarnival.jpg";
-import img2 from "../../assets/innotech.jpg.png";
-import img3 from "../../assets/acunetix9.jpg";
+import img3 from "../../assets/coderscarnival.jpg";
+import img2 from "../../assets/CC.jpg";
+import img1 from "../../assets/Acunetix11.jpg";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 
@@ -14,11 +14,9 @@ const EventCard = () => {
       </div>
       <div className="upcoming-event" data-aos="zoom-in">
         <h1>Upcoming Events</h1>
-        <h2>Acunetix 10.0</h2>
+        <h2>Coming Soon!</h2>
         <p>
-          This year we're celebrating the tenth year of ACUNETIX which is a
-          flagship fest with a series of technical and non- technical events
-          under it, in collaboration with ACES.
+          Stay with us for more updates on upcoming events.
         </p>
       </div>
       <div className="event-card-body">
@@ -35,7 +33,7 @@ const EventCard = () => {
             <img src={img3} className="card-img-top" alt="" />
           </div>
         </div>
-        <div className="event-btn">
+        <div className="event-btn mt-8">
           <Link to="/event">
             <Button
               variant="contained"

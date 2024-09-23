@@ -20,7 +20,7 @@ const Footer = () => {
               <div className="footer-widget">
                 <div className="footer-logo">
                   <Link to="/">
-                    <img src={logo} className="img-fluid" alt="logo" />
+                    <img src={logo} className="img-fluid mt-n1" alt="logo" />
                   </Link>
                 </div>
                 <div className="footer-text">
@@ -98,19 +98,6 @@ const Footer = () => {
                   </form>
                   <span>Thanks You For Subscribing!</span>
                 </div>
-                <div className="created-website">
-                  <p>
-                    Created By{" "}
-                    <a href="https://www.linkedin.com/in/burhanuddin49/">
-                      Burhanuddin Marcha &
-                    </a>
-                    <br />
-                    <a href="https://www.linkedin.com/in/aniketghavte/">
-                      {" "}
-                      Aniket Ghavte
-                    </a>
-                  </p>
-                </div>
               </div>
             </div>
           </div>
@@ -120,7 +107,7 @@ const Footer = () => {
         <div className="container">
           <div className="text-center text-lg">
             <div className="copyright-text">
-              <p>Copyright &copy; 2023, All Right Reserved</p>
+              <p>Copyright &copy; 2024, All Right Reserved</p>
             </div>
           </div>
         </div>
