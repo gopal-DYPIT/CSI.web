@@ -90,9 +90,7 @@
 .carousel-inner {
   display: flex;
   text-align: justify;
-  line-height: 1.6;
   height: 400px;
-
 }
 .wrapper .row {
   display: flex;
@@ -196,6 +194,20 @@ section:nth-child(4) {
 }
 .row section p {
   margin: 10px 0 17px 0;
+}
+@media screen and (max-width: 576px) {
+  .carousel-inner {
+    flex-direction: column; /* Stack items vertically */
+    text-align: center; /* Center text for better readability */
+    height: auto; /* Adjust height for mobile */
+    padding: 20px; /* Add padding for spacing */
+  }
+
+  /* Adjust text size if needed */
+  .carousel-inner p {
+    font-size: 14px; /* Example font size for paragraphs */
+    line-height: 1.4; /* Adjust line height for better readability */
+  }
 }
 
 @media (max-width: 790px) {
