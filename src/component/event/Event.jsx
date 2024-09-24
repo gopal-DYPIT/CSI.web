@@ -1,7 +1,7 @@
 import React from "react";
 import img1 from "../../assets/Acunetix11.jpg";
 import img2 from "../../assets/CC.jpg";
-import img3 from "../../assets/Acunetix11.jpg";
+import img3 from "../../assets/Acunetix10.png";
 import img4 from "../../assets/coderscarnival.jpg";
 import img5 from "../../assets/innotech.jpg.png";
 import img6 from "../../assets/acunetix9.jpg";
@@ -24,9 +24,9 @@ const Event = () => {
       <div className="event-header">
         <h1>Events</h1>
       </div>
-      <div className="upcoming-event" >
+      <div className="upcoming-event">
         <h1>Upcoming Events</h1>
-        <h2>Coming Soon!</h2>
+        <h2 className="blinking-text">Coming Soon!</h2>
         <p>Stay with us for more updates on upcoming events.</p>
       </div>
       <div className="event-card-body">
@@ -66,7 +66,7 @@ const Event = () => {
           </div>
         </div> */}
       </div>
-      <div className="free-space"></div>
+      {/* <div className="free-space"></div> */}
     </div>
   );
 };

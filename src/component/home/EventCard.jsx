@@ -1,8 +1,8 @@
 import React from "react";
 import "./EventCard.css";
-import img3 from "../../assets/coderscarnival.jpg";
-import img2 from "../../assets/CC.jpg";
 import img1 from "../../assets/Acunetix11.jpg";
+import img2 from "../../assets/CC.jpg";
+import img3 from "../../assets/Acunetix10.png";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 
