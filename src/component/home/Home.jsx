@@ -54,7 +54,7 @@ const carouselItems = [
 
 const Home = () => {
   return (
-    <div className="home-page" data-aos="fade-up" data-aos-offset="200" data-aos-delay="100" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center">
+    <div className="home-page" data-aos="fade-up">
       <h3 className="text-center pt-5 mb-5">
         Welcome to <span className="text-aqua">Computer Society of India</span>, DIT Chapter
       </h3>
@@ -62,7 +62,7 @@ const Home = () => {
         <div className="row firstRow">
           <div className="col-sm-6">
             <div id="carouselExampleFade" className="carousel slide carousel-fade" data-ride="carousel">
-              <div className="carousel-inner diff">
+              <div className="carousel-inner">
                 {carouselItems.map((item, index) => (
                   <div className={`carousel-item ${index === 0 ? 'active' : ''}`} key={index}>
                     <div className="d-block w-100" data-interval="3000" alt="...">
@@ -75,7 +75,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="right col-sm-6">
+          <div className="col-sm-6">
             <div id="carouselExampleFade-2" className="carousel slide carousel-fade" data-ride="carousel">
               <div className="carousel-inner">
                 {[img1, img2, img3, img4, img5].map((img, index) => (

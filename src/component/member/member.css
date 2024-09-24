@@ -15,11 +15,10 @@
   --title-color: hsl(215, 40%, 16%);
   --text-color: hsl(215, 8%, 50%);
   --white-color: #fff;
-  --custom: hsl(214, 32%, 40%)
+  --custom: hsl(214, 32%, 40%);
   --body-color: hsl(215, 100%, 99%);
 
   /*========== Font and typography ==========*/
-  /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Poppins", sans-serif;
   --h2-font-size: 1.25rem;
   --normal-font-size: 12px;
@@ -56,13 +55,8 @@ img {
 /*=============== member_card ===============*/
 .member_container {
   margin-inline: 1.5rem;
-  display: flex;
-  justify-content: space-around;
-  flex: auto;
-  flex-wrap: wrap;
-  place-items: center;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr); /* Default to 1 column for small screens */
   gap: 16px;
 }
 
@@ -71,7 +65,7 @@ img {
 }
 .member_card {
   position: relative;
-  width: 290px;
+  width: 290px; /* Consider using width: 100% for responsiveness */
   margin: 8px;
   background: var(--gradient-color);
   border-radius: 1rem 1rem 11rem 11rem;
@@ -227,7 +221,7 @@ img {
   transform: translateX(0);
 }
 
-
+/*=============== MEDIA QUERIES ===============*/
 @media (min-width: 768px) {
   .member_container {
     grid-template-columns: repeat(3, 1fr); /* 3 columns for larger screens */
@@ -236,5 +230,11 @@ img {
   /* When there are more than 7 members, change to 4 columns */
   .member_container:nth-child(n+8) {
     grid-template-columns: repeat(4, 1fr); /* 4 columns for additional rows */
+  }
+}
+
+@media (max-width: 767px) {
+  .member_container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for small mobile screens */
   }
 }
