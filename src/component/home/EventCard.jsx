@@ -12,12 +12,10 @@ const EventCard = () => {
       <div className="event-header">
         <h1>Events</h1>
       </div>
-      <div className="upcoming-event" data-aos="zoom-in">
+      <div className="upcoming-event">
         <h1>Upcoming Events</h1>
-        <h2>Coming Soon!</h2>
-        <p>
-          Stay with us for more updates on upcoming events.
-        </p>
+        <h2 className="blinking-text">Coming Soon!</h2>
+        <p>Stay with us for more updates on upcoming events.</p>
       </div>
       <div className="event-card-body">
         <h2>Previous Events held by us</h2>
@@ -34,13 +32,12 @@ const EventCard = () => {
           </div>
         </div>
         <div className="event-btn mt-8">
-          <Link to="/event">
+          <Link to="/event" onClick={() => window.scrollTo(0, 0)}>
             <Button
               variant="contained"
-              // href="/event"
               style={{ background: "#3c618a" }}
             >
-              Checkout more event
+              Checkout more events
             </Button>
           </Link>
         </div>

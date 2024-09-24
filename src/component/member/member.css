@@ -4,26 +4,26 @@
 /*=============== VARIABLES CSS ===============*/
 :root {
   /*========== Colors ==========*/
-  /*Color mode HSL(hue, saturation, lightness)*/
-  --first-color: hsl(175, 55%, 40%);
-  --first-color-light: hsl(175, 30%, 48%);
-  --first-color-lighten: hsl(175, 40%, 62%);
+  --first-color: hsl(215, 53%, 40%);
+  --first-color-light: hsl(215, 40%, 48%);
+  --first-color-lighten: hsl(215, 50%, 62%);
   --gradient-color: linear-gradient(
     180deg,
-    hsl(178, 35%, 45%),
-    hsl(178, 55%, 28%)
+    hsl(218, 35%, 45%),
+    hsl(218, 53%, 28%)
   );
-  --title-color: hsl(175, 40%, 16%);
-  --text-color: hsl(175, 8%, 50%);
+  --title-color: hsl(215, 40%, 16%);
+  --text-color: hsl(215, 8%, 50%);
   --white-color: #fff;
-  --body-color: hsl(175, 100%, 99%);
+  --custom: hsl(214, 32%, 40%)
+  --body-color: hsl(215, 100%, 99%);
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Poppins", sans-serif;
   --h2-font-size: 1.25rem;
-  --normal-font-size: 0.938rem;
-  --smaller-font-size: 0.75rem;
+  --normal-font-size: 12px;
+  --smaller-font-size: 10px;
 }
 
 /*=============== BASE ===============*/
@@ -55,15 +55,20 @@ img {
 
 /*=============== member_card ===============*/
 .member_container {
-  /* height: 100vh; */
   margin-inline: 1.5rem;
   display: flex;
   justify-content: space-around;
   flex: auto;
   flex-wrap: wrap;
   place-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
 }
 
+.member_card:nth-child(7) {
+  grid-column: span 3; /* Make the last card take full width of 3 columns */
+}
 .member_card {
   position: relative;
   width: 290px;
@@ -72,8 +77,9 @@ img {
   border-radius: 1rem 1rem 11rem 11rem;
   padding: 2.5rem 1.5rem 3.5rem;
   text-align: center;
-  box-shadow: 0 8px 32px hsla(178, 55%, 20%, 0.15);
+  box-shadow: 0 8px 32px hsla(215, 53%, 20%, 0.15);
 }
+
 .member_card__img {
   width: 90px;
 }
@@ -101,14 +107,22 @@ img {
   color: var(--white-color);
 }
 .member_card__name {
-  font-size: var(--h2-font-size);
+  font-size: 18px;
   font-weight: 600;
   margin-bottom: 0.25rem;
 }
 .member_card__profession {
-  font-size: var(--smaller-font-size);
+  font-size: 12px;
   font-weight: 500;
 }
+.member_card__tenure {
+  font-size: 11px; /* Adjust the size as per your design */
+  color: #d6d8da; /* A subtle color for the tenure text */
+  margin-top: 5px; /* Adds a small space between the profession and tenure */
+  display: block;
+  font-weight: 500; /* Makes the tenure text slightly bold */
+}
+
 
 /*=============== member_card INFO ===============*/
 .info {
@@ -211,4 +225,16 @@ img {
 .info:hover .info__data,
 .info:hover .info__social {
   transform: translateX(0);
+}
+
+
+@media (min-width: 768px) {
+  .member_container {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for larger screens */
+  }
+
+  /* When there are more than 7 members, change to 4 columns */
+  .member_container:nth-child(n+8) {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for additional rows */
+  }
 }

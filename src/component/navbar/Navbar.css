@@ -2,7 +2,24 @@
   position: sticky;
   top: 0;
   z-index: 999;
-  /* background-color: #0d2c44; */
+}
+
+.navbar-nav .nav-link {
+  font-size: 16px; /* Increase font size */
+  padding: 12px 16px;
+  margin-right: 20px; /* Increase padding for larger clickable area */
+}
+
+.navbar-nav .nav-link.active {
+  font-weight: bold;
+  color: #ffffff; /* Keep the text color white */
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.2); /* Glowing effect */
+  transition: text-shadow 0.3s ease-in-out;
+}
+
+/* Optional: For a hover glow effect on all links */
+.navbar-nav .nav-link:hover {
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5); /* Slight glow on hover */
 }
 
 .NActive {
@@ -13,31 +30,24 @@
   margin-left: 40px;
   margin-right: 230px;
   width: auto; /* Changed to auto to maintain aspect ratio */
-  max-width: 160px; /* Set a maximum width */
+  max-width: 200px; /* Increased max width */
   height: auto; /* Changed to auto to maintain aspect ratio */
-  max-height: 70px; /* Set a maximum height */
+  max-height: 90px; /* Increased max height */
   padding: 5px; /* Optional: Add some padding */
   transition: max-width 0.3s; /* Optional: Smooth transition */
 }
 
 .logo-title {
-  font-size: 17px;
+  font-size: 20px; /* Increase logo title font size */
 }
 
 .new-bounce {
-  font-size: 10px;
-  margin-left: 4px;
+  font-size: 12px; /* Increased font size for bouncing text */
   position: relative;
-  top: -10px;
-  margin-bottom: 13px;
   color: #ffffff;
   padding: 3px 4px;
   border-radius: 3px;
-}
-
-.new-bounce {
-  animation: bouncing 0.8s cubic-bezier(0.1, 0.05, 0.05, 1) 0s infinite
-    alternate both;
+  animation: bouncing 0.8s cubic-bezier(0.1, 0.05, 0.05, 1) infinite alternate;
 }
 
 @keyframes bouncing {
@@ -51,14 +61,12 @@
 
 @media screen and (max-width: 576px) {
   .logo_csi {
-    width: auto; /* Keep it auto to maintain aspect ratio */
-    max-width: 50px; /* Set max width for mobile */
-    max-height: 50px; /* Set max height for mobile */
-    margin-left: 10px; /* Adjust margins for better alignment */
-    margin-right: 10px;
+    max-width: 70px; /* Set max width for mobile */
+    max-height: 70px; /* Set max height for mobile */
+    margin: 10px; /* Adjust margins for better alignment */
   }
 
   .logo-title {
-    font-size: 15px;
+    font-size: 18px; /* Increased font size for mobile */
   }
 }

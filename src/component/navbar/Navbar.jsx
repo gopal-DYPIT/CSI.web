@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import logo from "../../assets/CSI.png";
 import "./Navbar.css";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -17,19 +17,22 @@ const Navbar = () => {
     }
   };
 
-  window.addEventListener("scroll", changeBackground);
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", changeBackground);
+    return () => {
+      window.removeEventListener("scroll", changeBackground);
+    };
+  }, []);
 
   return (
-    <nav
-      className={
-        navbar
-          ? "navbar navbar-expand-lg navbar-dark NActive"
-          : "navbar navbar-expand-lg navbar-dark"
-      }
-    >
-      <Link className="navbar-brand" href="/">
-        <img className="logo_csi" src={logo} alt="" />
-      </Link>
+    <nav className={navbar ? "navbar navbar-expand-lg navbar-dark NActive" : "navbar navbar-expand-lg navbar-dark"}>
+      <NavLink className="navbar-brand" to="/" onClick={scrollToTop}>
+        <img className="logo_csi" src={logo} alt="CSI Logo" />
+      </NavLink>
       <button
         className="navbar-toggler"
         type="button"
@@ -41,74 +44,47 @@ const Navbar = () => {
       >
         <span className="navbar-toggler-icon"></span>
       </button>
-      <div
-        className="collapse navbar-collapse d-flex-lg-row justify-content-lg-around"
-        id="navbarNav"
-      >
+      <div className="collapse navbar-collapse d-flex-lg-row justify-content-lg-around" id="navbarNav">
         <ul className="navbar-nav">
-          <li className="nav-item active">
-            <Link className="nav-link" to="/">
-              Home <span className="sr-only">(current)</span>
-            </Link>
-          </li>
-
-          {/* <li className="nav-item">
-            <a
-              className="nav-link"
-              target="_blank"
-              href="https://acunetix10.netlify.app/"
-            >
-              ACUNETIX 10.0
-              <span className="sr-only">(current)</span>
-              <span className="new-bounce">New</span>
-            </a>
-          </li> */}
           <li className="nav-item">
-            <Link className="nav-link" to="/event">
+            <NavLink className="nav-link" exact to="/" activeClassName="active" onClick={scrollToTop}>
+              Home
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink className="nav-link" to="/event" activeClassName="active" onClick={scrollToTop}>
               Events
-            </Link>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/blog">
-              Blogs
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/member">
+            <NavLink className="nav-link" to="/member" activeClassName="active" onClick={scrollToTop}>
               Members
-            </Link>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/about">
+            <NavLink className="nav-link" to="/blog" activeClassName="active" onClick={scrollToTop}>
+              Blogs
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink className="nav-link" to="/about" activeClassName="active" onClick={scrollToTop}>
               About
-            </Link>
+            </NavLink>
           </li>
         </ul>
         <ul className="navbar-nav d-flex flex-row r-0">
           <li className="nav-item me-3 me-lg-0">
-            <a
-              className="nav-link"
-              target="_blank"
-              href="https://www.instagram.com/csidit/"
-            >
+            <a className="nav-link" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/csidit/">
               <InstagramIcon />
             </a>
           </li>
           <li className="nav-item me-3 me-lg-0">
-            <a
-              className="nav-link"
-              target="_blank"
-              href="https://www.linkedin.com/company/computer-society-of-india-dit/mycompany/"
-            >
+            <a className="nav-link" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/computer-society-of-india-dit/mycompany/">
               <LinkedInIcon />
             </a>
           </li>
           <li className="nav-item me-3 me-lg-0">
-            <a
-              className="nav-link"
-              target="_blank"
-              href="https://www.facebook.com/csiditofficial/?ref=br_rs"
-            >
+            <a className="nav-link" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/csiditofficial/?ref=br_rs">
               <Facebook />
             </a>
           </li>

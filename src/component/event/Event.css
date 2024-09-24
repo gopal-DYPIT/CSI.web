@@ -26,8 +26,10 @@
 }
 
 .blinking-text {
+  margin-bottom: 20px;
   animation: blink 1.5s infinite; /* Blinks every second */
 }
+
 
 @media screen and (max-width: 576px) {
   .event-page-card {
