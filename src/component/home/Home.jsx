@@ -52,11 +52,11 @@ const carouselItems = [
   },
 ];
 
-const Home = () => {
+const Home = () => { 
   return (
     <div className="home-page" data-aos="fade-up">
       <h3 className="text-center pt-5 mb-5">
-        Welcome to <span className="text-aqua">Computer Society of India</span>, DIT Chapter
+        <span className="chapter">Welcome to </span><span className="text-aqua">Computer Society of India</span> <span className="chapter">DIT Chapter</span>
       </h3>
       <div className="container-fluid py-4 p-sm-5 overview">
         <div className="row firstRow">

@@ -234,11 +234,20 @@ section:nth-child(4) {
   .carousel-inner {
     flex-direction: column; /* Stack items vertically */
     font-family:Arial, Helvetica, sans-serif;
-    text-align: justify; /* Center text for better readability */
+    text-align: justify;
+    word-spacing: -1px;
     height: auto; /* Adjust height for mobile */
     padding: 20px; /* Add padding for spacing */
   }
 
+  .chapter {
+    font-size: 20px;
+  }
+  .text-aqua{
+    color: aqua;
+    display: block;
+    font-size: 31px;
+  }
   /* Adjust text size if needed */
   .carousel-inner p {
     font-size: 14px; /* Example font size for paragraphs */
