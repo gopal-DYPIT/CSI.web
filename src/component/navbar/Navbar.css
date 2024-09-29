@@ -68,8 +68,8 @@
 
 @media screen and (max-width: 576px) {
   .logo_csi {
-    max-width: 70px; /* Set max width for mobile */
-    max-height: 70px; /* Set max height for mobile */
+    max-width: 100px; /* Set max width for mobile */
+    max-height: 110px; /* Set max height for mobile */
     margin: 10px; /* Adjust margins for better alignment */
   }
 
