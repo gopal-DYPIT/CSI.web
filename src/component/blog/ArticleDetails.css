@@ -1,0 +1,142 @@
+.article-details {
+  /* display: flex; */
+  max-width: 2000px; /* Keep max width */
+  margin: 0 60px; 
+  padding: 10px 0; 
+}
+
+.article-container {
+  padding: 4rem;
+  flex: 3; /* Flex-grow for the article container */
+  background-color: #f5f5f5; /* Light background for better readability */
+  border-radius: 10px; /* Rounded corners */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  /* margin-right: 1rem;  */
+}
+
+.contributors-section {
+  /* padding-left: 5px; */
+  /* flex: 1;  */
+  padding-top: 30px;
+  border-radius: 10px; /* Rounded corners */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  padding-left: 10px;
+}
+
+.contributors-section h2 {
+  margin-bottom: 1rem; /* Space below the contributors title */
+  text-align: center; /* Center the title */
+  font-size: 1.5rem; /* Title font size */
+  color: #007bff; /* Highlight color */
+}
+
+.contributors-list {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: row; /* Align contributor cards in a row */
+  justify-content: center; /* Center cards horizontally */
+  align-items: center; /* Center items vertically */
+  gap: 1rem; /* Space between contributor cards */
+  flex-wrap: wrap; /* Allow cards to wrap to the next line if needed */
+  padding-bottom: 20px;
+}
+
+.contributor-card {
+  display: flex;
+  justify-content: space-between; /* Align the avatar/name to the left, links to the right */
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+  width: 300px; /* Set a fixed width */
+  max-width: 100%; 
+  min-height: 50px;
+  margin-right: 0; /* Reduce the height further */ /* Reduce padding to make the card smaller */
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+}
+
+.contributor-links {
+  gap: 10px; /* Reduce space between icons */
+  justify-content: flex-end;/* Reduce space between icons */
+}
+
+.contributor-avatar {
+  margin-right: 0.5rem; /* Reduce space between avatar and name */
+}
+
+.contributor-avatar img {
+  width: 24px; /* Reduce avatar size */
+  height: 24px; /* Keep avatar proportional */
+  border-radius: 50%; /* Circle shape */
+}
+
+.contributor-name {
+  font-size: 0.9rem; /* Reduce font size for contributor names */
+  color: #333; /* Darker color for names */
+  white-space: nowrap; /* Ensure name stays on one line */
+}
+
+.social-icon {
+  width: 20px; /* Reduce icon size */
+  height: 20px; /* Proportional icon height */
+  margin-left: 5px; /* Keep a little space between icons */
+}
+
+.contributor-card:hover {
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+
+.article-title {
+  font-size: 2.5rem; /* Title size */
+  font-weight: 600; /* Medium weight for title */
+  color: #333; /* Dark color for contrast */
+  margin-bottom: 1rem; /* Space below title */
+  text-align: center; /* Center title */
+}
+
+.article-content {
+  font-size: 1.1rem; /* Base font size for content */
+  line-height: 1.6; /* Improved line height for readability */
+  color: #555; /* Slightly lighter color for content */
+  margin-bottom: 1.5rem; /* Space below content */
+}
+
+
+.article-content h2 {
+  font-size: 1.8rem; /* Size for subheadings */
+  color: #007bff; /* Highlight color for subheadings */
+  margin-top: 2rem; /* Space above subheadings */
+}
+
+.article-image {
+  width: 100%; /* Responsive image width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Rounded corners for images */
+  margin: 1rem 0; /* Space around images */
+}
+
+.article-not-found {
+  text-align: center; /* Center the error message */
+  color: #f00; /* Red color for error message */
+  font-size: 1.5rem; /* Size of error message */
+  padding: 2rem; /* Padding around error message */
+  background-color: rgba(255, 0, 0, 0.1); /* Light red background */
+  border-radius: 5px; /* Slightly rounded corners */
+  margin: 1rem; /* Space around the error message */
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+  .article-details {
+    flex-direction: column; /* Stack article and contributors on smaller screens */
+  }
+
+  .article-container {
+    margin-right: 0; /* Reset margin for small screens */
+    margin-bottom: 1rem; /* Add margin below article */
+  }
+
+  .contributors-section {
+    margin-left: 0; /* Reset margin for small screens */
+  }
+}

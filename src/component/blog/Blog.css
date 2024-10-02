@@ -1,52 +1,53 @@
 .app__blog {
-    background-color: rgba(100, 100, 100, 0);
+    background-color: rgb(69, 97, 134); /* Subtle white background */
     margin: 0;
     padding: 2%;
-    backdrop-filter: blur(5px);
-    box-shadow: inset 0 0 2000px rgba(0, 0, 0, 0);
-    border-radius: 5px;
-}
-
-.app__blog_view img {
-    height: 10rem;
-    width: 100%;
-    padding: 1%;
-}
-
-.app__blog_header {
-    padding: 2%;
-}
-
-.app__blog_header h2 {
-    font-size: 3rem; /* Consider using rem for better responsiveness */
-    color: white; /* Fixed typo from 'whi' to 'white' */
-    font-weight: 300;
-}
-
-.app__blog_tabs {
-    display: flex;
-}
-
-.app__blog_tabs h6 {
-    padding: 0 2%;
-    color: white;
-}
-
-.app_articles {
-    padding: 2%;
-}
-
-.articles__black1 h6,
-.articles__black1 h3 {
-    color: white;
-    font-weight: 300; /* Change h3 if different font-weight is required */
-    overflow: hidden; /* Ensure it doesn't overflow */
-    display: -webkit-box; /* For max-lines effect */
-    -webkit-line-clamp: 3; /* Limit lines */
-    -webkit-box-orient: vertical; /* Use vertical box for clamping */
-}
-
-.app__editors {
-    display: flex;
-    flex-direction: row;
-}
+    backdrop-filter: blur(8px);
+    box-shadow: inset 0 0 2000px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  .app_articles {
+    margin-top: 1rem;
+  }
+  
+  .article-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .article-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .article-title {
+    color: #333; /* Darker title for better contrast */
+    font-weight: bold;
+  }
+  
+  h2 {
+    color: white; /* Header color for the blog section */
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .read-more-button {
+    background-color: transparent; /* Default background color */
+    color: white; /* Text color */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transition for smooth effect */
+  }
+  
+  .read-more-button:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Light hover effect */
+    color: #000; /* Change text color on hover if needed */
+  }
+  
+  /* If you want to specifically set the secondary color, you can also use CSS variables, assuming you have defined them */
+  .read-more-button:hover {
+    background-color: var(--mui-palette-secondary-main); /* Assuming you have a variable for secondary color */
+  }
+  
+  

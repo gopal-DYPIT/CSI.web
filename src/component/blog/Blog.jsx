@@ -1,84 +1,73 @@
-import { Fullscreen } from '@mui/icons-material'
-import React from 'react'
+import React from 'react';
+import { Card, CardContent, CardMedia, Typography, Button, Grid } from '@mui/material';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import banner from '../../assets/banner.png';
+import './Blog.css';
 
-import banner from '../../assets/banner.png'
-import CSI from '../../assets/CSI.png'
-import Articles from './Articles'
-
-import logo from "../../assets/CSI.png";
-import profile1 from '../../assets/profile1.jpg'
-
-import './Blog.css'
-
-const Editors = [
+const articles = [
   {
-    name: "Alex Benzer",
-    post: "Student at DIT",
-    profile: profile1,
-    
+    id: 1,
+    title: "Understanding React",
+    description: "React is a powerful library for building user interfaces...",
+    image: banner,
   },
   {
-    name: "Alex Benzer",
-    post: "Student at DIT",
-    profile: profile1,
-    
+    id: 2,
+    title: "Advanced CSS Tricks",
+    description: "Explore advanced techniques to make your web pages stand out...",
+    image: banner,
   },
   {
-    name: "Alex Benzer",
-    post: "Student at DIT",
-    profile: profile1,
-
-  }
-]
+    id: 3,
+    title: "JavaScript Tips",
+    description: "Improve your JavaScript skills with these essential tips...",
+    image: banner,
+  },
+  {
+    id: 4,
+    title: "Building Accessible Web Apps",
+    description: "Learn how to create web applications that everyone can use...",
+    image: banner,
+  },
+  {
+    id: 5,
+    title: "Exploring React Hooks",
+    description: "A deep dive into React Hooks and how they improve code readability...",
+    image: banner,
+  },
+];
 
 const Blog = () => {
   return (
-    <div className='app__blog' style={{background: ''}}>
-
-      <div className='app__blog_articles' style={{display: 'flex', outlineColor: 'white'}}>
-        <div style={{width: '60%'}}>
-          <div className='app__blog_view' >
-              <img src={banner}/>
-          </div>
-          <div className='app__blog_header'>
-            <h2 style={{color: 'white'}}>CSI Blogs</h2>
-          </div>
-          <div className='app__blog_tabs'>
-            <h6>Home</h6>
-            <h6>About</h6>
-          </div>
-          <Articles/>
-
-        </div>
-
-        <div style={{ padding: '5%', width: 'auto'}}>
-          <div>
-            <img className="logo_csi" src={logo} alt="" />
-          </div>
-          <p style={{width: '100px', color: 'white', overflow: 'auto', fontSize: '0.8rem'}}>The official CSI DIT blog</p>
-
-          <h6 style={{color: 'white'}}>Editors</h6>
-          {
-            Editors.map((editor, index) => (
-              <div className='app__editors'>
-                <div>
-                  <img style={{height: '3.5rem', width: '3.5rem', borderRadius: '50%'}} src={editor.profile} />
-                </div>
-                <div>
-                  <h6 style={{color: 'white', padding :'2% 15%', width: '10rem'}}>{editor.name}</h6>
-                  <p style={{color: 'white', width: '10rem'}}>{editor.post}</p>
-                </div>
-
-              </div>
-            ))
-          }
-        </div>
-
-      </div>
-       
+    <div className='app__blog'>
+      <h2>CSI Blogs</h2>
+      <Grid container spacing={4} className="app_articles">
+        {articles.map((article) => (
+          <Grid item xs={12} sm={6} md={4} key={article.id}>
+            <Card className="article-card">
+              <CardMedia
+                component="img"
+                height="140"
+                image={article.image}
+                alt={article.title}
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" color="black" component="div" className="article-title">
+                  {article.title}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  {article.description}
+                </Typography>
+                <Button className="read-more-button" component={Link} to={`/blog/${article.id}`} size="small" color="primary">
+                  Read More
+                </Button>
+              </CardContent>
+            </Card>
+          </Grid>
+        ))}
+      </Grid>
     </div>
- 
-  )
+  );
 }
 
-export default Blog
+export default Blog;
